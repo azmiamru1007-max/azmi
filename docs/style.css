@@ -62,3 +62,78 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Pengaturan dasar untuk seluruh halaman */
+body {
+    font-family: sans-serif; /* Menggunakan font yang mudah dibaca */
+    background-color: #f0f2f5; /* Warna latar belakang abu-abu muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Memastikan kartu profil berada di tengah halaman */
+    margin: 0;
+}
+
+/* Gaya utama untuk kartu profil */
+.kartu-profil {
+    background-color: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px; /* Membuat sudut kartu menjadi tumpul */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Memberi efek bayangan */
+    text-align: center; /* <<< INI KUNCI #1: Membuat semua teks di dalamnya ke tengah */
+}
+
+/* Gaya untuk "kotak" gambar */
+.kartu-profil img {
+    width: 150px; /* Lebar gambar */
+    height: 150px; /* Tinggi gambar */
+    border-radius: 50%; /* <<< INI KUNCI #2: Membuat kotak gambar menjadi lingkaran */
+    border: 5px solid #ffffff; /* Memberi bingkai putih di sekitar gambar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Bayangan halus khusus untuk gambar */
+    object-fit: cover; /* Memastikan gambar tidak gepeng */
+    margin-bottom: 20px; /* Memberi jarak antara gambar dan judul */
+}
+
+/* Gaya untuk judul H1 */
+.kartu-profil h1 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Gaya untuk paragraf */
+.kartu-profil p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Gaya untuk link dan tombol agar seragam */
+.tombol-instagram, #sapaButton {
+    display: block; /* Membuat tombol memenuhi lebar */
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animasi halus saat disentuh mouse */
+}
+
+/* Warna spesifik untuk tombol Instagram */
+.tombol-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+/* Warna spesifik untuk tombol Sapa */
+#sapaButton {
+    background-color: #007bff;
+}
+
+/* Efek saat mouse berada di atas tombol */
+.tombol-instagram:hover, #sapaButton:hover {
+    opacity: 0.9;
+}
