@@ -1,30 +1,64 @@
-/* Import Font dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* ===== 1. IMPORT FONT & RESET DASAR ===== */
 
-/* Style Dasar untuk Seluruh Halaman */
-html, body {
+/* Alternatif Font Elegan dari Google (jika Corduroy tidak tersedia) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* Reset dasar untuk konsistensi di semua browser */
+* {
     margin: 0;
     padding: 0;
-    height: 100%; /* Memastikan gradasi mengisi seluruh tinggi layar */
-    font-family: 'Poppins', sans-serif; /* Font utama dengan fallback */
-    color: #333; /* Warna teks gelap agar mudah dibaca di atas background terang */
+    box-sizing: border-box;
 }
 
-/* Style untuk Background Gradasi */
+/* ===== 2. PALET WARNA & STYLE UTAMA ===== */
 body {
-    background: linear-gradient(to bottom, #a8c0ff, #ffffff); /* Gradasi dari biru muda ke putih */
-    background-repeat: no-repeat; /* Mencegah gradasi berulang jika konten pendek */
-    background-attachment: fixed; /* Membuat background tetap saat di-scroll */
+    font-family: 'Lato', sans-serif; /* Font utama untuk isi konten, mudah dibaca */
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #f4f4f9; /* Warna background abu-abu sangat muda, lebih lembut dari putih */
+    color: #2c3e50; /* Warna teks utama (biru keabuan tua), lebih nyaman di mata daripada hitam pekat */
 }
 
-/* Contoh Style untuk Judul dan Paragraf */
+/* ===== 3. STRUKTUR & LAYOUT ===== */
+
+/* Kontainer utama untuk membungkus konten agar tidak terlalu lebar di layar besar */
+.container {
+    width: 90%;
+    max-width: 960px; /* Lebar maksimal konten */
+    margin: 40px auto; /* Memberi jarak atas/bawah dan menengahkan kontainer */
+    padding: 30px;
+    background-color: #ffffff; /* Latar belakang putih untuk area konten utama */
+    border-radius: 8px; /* Sudut sedikit melengkung untuk kesan modern */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bayangan halus untuk efek 'terangkat' */
+}
+
+/* ===== 4. TIPOGRAFI (JUDUL & TEKS) ===== */
+
+/*
+   PENTING: Ganti 'Playfair Display' dengan 'Corduroy'
+   jika Anda sudah mengikuti langkah-langkah di bawah untuk menambahkan font custom.
+*/
 h1, h2, h3 {
-    font-weight: 700; /* Menggunakan ketebalan 'Bold' dari font Poppins */
-    color: #1a237e; /* Warna biru tua untuk judul agar kontras */
+    font-family: 'Corduroy', 'Playfair Display', serif; /* Font judul utama */
+    font-weight: 700;
+    color: #34495e; /* Warna judul (lebih gelap dari teks biasa) */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Ukuran untuk judul utama */
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.6; /* Jarak antar baris agar nyaman dibaca */
-    font-weight: 400; /* Menggunakan ketebalan 'Regular' */
+    margin-bottom: 15px;
+}
+
+a {
+    color: #3498db; /* Warna biru cerah untuk link agar menonjol */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
 }
