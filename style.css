@@ -1,0 +1,117 @@
+/* Reset kecil dan font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg-top: #a8c0ff;
+  --bg-bottom: #ffffff;
+  --card-bg: rgba(255,255,255,0.85);
+  --accent: #1a237e;
+  --muted: #6b7280;
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(20,20,40,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#1f2937;
+  background: linear-gradient(180deg,var(--bg-top),var(--bg-bottom));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Page layout */
+.page{
+  width:100%;
+  max-width:900px;
+}
+
+/* Header */
+.site-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+.site-title{
+  margin:0;
+  font-size:28px;
+  color:var(--accent);
+  letter-spacing:0.2px;
+}
+.site-subtitle{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-weight:400;
+}
+
+/* Card */
+.profile-card{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  padding:20px;
+  border-radius:var(--radius);
+  background:var(--card-bg);
+  box-shadow:var(--shadow);
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(34,40,90,0.04);
+}
+.profile-avatar{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:12px;
+  flex:0 0 140px;
+  border:4px solid rgba(255,255,255,0.6);
+}
+
+/* Body */
+.profile-body h2{
+  margin:0 0 8px 0;
+  font-size:20px;
+  color:var(--accent);
+}
+.profile-body p{
+  margin:0 0 12px 0;
+  color:var(--muted);
+}
+
+/* Actions */
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow: 0 6px 14px rgba(26,35,126,0.14);
+}
+.btn:focus{outline:3px solid rgba(26,35,126,0.14); outline-offset:2px}
+.btn-ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(26,35,126,0.12);
+  box-shadow:none;
+}
+
+/* Footer */
+.site-footer{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media (max-width:640px){
+  .profile-card{flex-direction:column; text-align:center}
+  .profile-avatar{width:120px;height:120px;flex:0 0 auto}
+}
