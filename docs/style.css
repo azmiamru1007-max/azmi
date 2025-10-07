@@ -1,33 +1,33 @@
 /* Pengaturan dasar untuk seluruh halaman */
 body {
-    font-family: sans-serif; /* Menggunakan font yang mudah dibaca */
-    background-color: #AFEEEE; /* Warna latar belakang abu-abu muda */
+    font-family: sans-serif;
+    background-color: #AFEEEE; /* Sesuai pilihan Anda: PaleTurquoise */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Memastikan kartu profil berada di tengah halaman */
+    min-height: 100vh;
     margin: 0;
 }
 
 /* Gaya utama untuk kartu profil */
 .kartu-profil {
-    background-color: #E0FFFF;
+    background-color: #F0FFFF; /* Azure, warna putih kebiruan yang sangat soft */
     width: 320px;
     padding: 30px;
-    border-radius: 15px; /* Membuat sudut kartu menjadi tumpul */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Memberi efek bayangan */
-    text-align: center; /* <<< INI KUNCI #1: Membuat semua teks di dalamnya ke tengah */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* Bayangan sedikit lebih menyebar */
+    text-align: center;
 }
 
 /* Gaya untuk "kotak" gambar */
 .kartu-profil img {
-    width: 150px; /* Lebar gambar */
-    height: 150px; /* Tinggi gambar */
-    border-radius: 50%; /* <<< INI KUNCI #2: Membuat kotak gambar menjadi lingkaran */
-    border: 5px solid #ffffff; /* Memberi bingkai putih di sekitar gambar */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Bayangan halus khusus untuk gambar */
-    object-fit: cover; /* Memastikan gambar tidak gepeng */
-    margin-bottom: 20px; /* Memberi jarak antara gambar dan judul */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 /* Gaya untuk judul H1 */
@@ -35,41 +35,60 @@ body {
     font-size: 24px;
     margin-top: 0;
     margin-bottom: 8px;
-    color: #333;
+    color: #2F4F4F; /* DarkSlateGray, agar teks lebih mudah dibaca */
 }
 
 /* Gaya untuk paragraf */
 .kartu-profil p {
     font-size: 16px;
-    color: #666;
+    color: #556B2F; /* DarkOliveGreen, warna soft yang serasi */
     margin-bottom: 25px;
 }
 
-/* Gaya untuk link dan tombol agar seragam */
-.tombol-instagram, #sapaButton {
-    display: block; /* Membuat tombol memenuhi lebar */
+/* Gaya umum untuk tombol Instagram */
+.tombol-instagram {
+    display: block;
     text-decoration: none;
     color: white;
     padding: 12px;
-    margin-top: 10px;
-    border-radius: 8px;
+    margin: 20px auto 10px; /* Memberi jarak atas dan bawah */
+    border-radius: 25px; /* Dibuat lebih melengkung/kapsul */
     border: none;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Animasi halus saat disentuh mouse */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transisi untuk hover */
 }
 
-/* Warna spesifik untuk tombol Instagram */
+/* Warna gradasi ungu yang soft untuk tombol Instagram */
 .tombol-instagram {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background: linear-gradient(45deg, #C8A2C8, #8A2BE2); /* Gradasi dari Lilac ke BlueViolet */
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.3);
 }
 
-/* Warna spesifik untuk tombol Sapa */
+.tombol-instagram:hover {
+    transform: translateY(-2px); /* Efek sedikit terangkat saat disentuh mouse */
+    box-shadow: 0 6px 12px rgba(138, 43, 226, 0.4);
+}
+
+/* Tombol "Sapa Saya" yang didesain ulang */
 #sapaButton {
-    background-color: #007bff;
+    display: inline-block; /* Agar posisinya di tengah sesuai text-align parent */
+    width: 55px;  /* Lebar dan tinggi sama untuk lingkaran sempurna */
+    height: 55px;
+    padding: 0;
+    margin-top: 15px;
+    border-radius: 50%; /* KUNCI #1: Membuat tombol menjadi lingkaran */
+    border: 3px solid #F0FFFF; /* Border yang warnanya sama dengan background kartu */
+    background-color: #9370DB; /* KUNCI #2: Warna MediumPurple yang selaras */
+    color: white;
+    font-size: 24px; /* Ukuran untuk ikon/emoji di dalamnya */
+    line-height: 50px; /* Untuk menengahkan ikon/emoji secara vertikal */
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efek saat mouse berada di atas tombol */
-.tombol-instagram:hover, #sapaButton:hover {
-    opacity: 0.9;
+#sapaButton:hover {
+    background-color: #8A2BE2; /* Warna menjadi lebih gelap saat disentuh mouse */
+    transform: scale(1.1); /* Sedikit membesar saat disentuh mouse */
 }
