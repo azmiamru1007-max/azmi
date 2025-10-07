@@ -1,7 +1,7 @@
 /* Pengaturan dasar untuk seluruh halaman */
 body {
     font-family: sans-serif; /* Menggunakan font yang mudah dibaca */
-    background-color: #f0f2f5; /* Warna latar belakang abu-abu muda */
+    background-color: #AFEEEE; /* Warna latar belakang abu-abu muda */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body {
 
 /* Gaya utama untuk kartu profil */
 .kartu-profil {
-    background-color: white;
+    background-color: #E0FFFF;
     width: 320px;
     padding: 30px;
     border-radius: 15px; /* Membuat sudut kartu menjadi tumpul */
